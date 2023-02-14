@@ -6,6 +6,9 @@ public class Estoque<T extends Produto> {
 
     private List<T> listaDeProdutos = new ArrayList<>();
 
+    public static <T extends Produto> void listarProdutos(List<T> listaProduto) {
+        listaProduto.forEach(System.out::println);
+    }
     public void adicionar(T produto) {
         listaDeProdutos.add(produto);
     }
